@@ -1,0 +1,29 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  height: 100vh;
+
+  button {
+    background: #1462ff;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+
+    &:hover {
+      transition: 0.2s ease-in;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px;
+    }
+  }
+}
