@@ -14,7 +14,7 @@ const Home = () => {
     <div className="home-container">
       <h3>Enter into Student Info System</h3>
       <button onClick={handleSubmit}>
-        Enroll Now! <FiChevronRight size={22} style={{ marginLeft: '25px'}}/>
+        Enroll Now! <FiChevronRight size={22} style={{ marginLeft: "15px" }} />
       </button>
     </div>
   );

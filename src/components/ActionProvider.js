@@ -20,13 +20,20 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       messages: [...prev.messages, userMessageBot],
     }));
 
-    const botMessage = createChatBotMessage("Pick a slot !");
+    const botMessage = createChatBotMessage("Pick a slot !", {
+      withAvatar: true,
+      delay: 600,
+      widget: "calender",
+    });
 
     setState((prev) => ({
       ...prev,
       messages: [...prev.messages, botMessage],
     }));
- 
+  };
+
+  const handleDateSelected = (val) => {
+    console.log(val);
   };
 
   const handleDefault = () => {
@@ -46,6 +53,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
             handleHello,
             handleGotIt,
             handleDefault,
+            handleDateSelected,
           },
         });
       })}
