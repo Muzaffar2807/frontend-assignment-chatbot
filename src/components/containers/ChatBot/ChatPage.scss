@@ -18,18 +18,18 @@
   }
 }
 
-.bot-div{
+.bot-div {
   position: fixed;
   right: 25px;
   bottom: 10px;
-   width: 30px;
+  width: 30px;
   height: 30px;
   border-radius: 30px;
   padding: 10px;
   color: #fff;
-  background-color:#1462ff ;
-  border: none; 
-  z-index: 9999; 
+  background-color: #1462ff;
+  border: none;
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,11 +46,11 @@
     width: 100% !important;
     height: 100vh !important;
     overflow: hidden !important;
-    margin-top: 5rem;
+    margin-top: 2rem;
 
     .react-chatbot-kit-chat-container {
       width: 100%;
-      height: 70vh;
+      height: auto;
 
       .react-chatbot-kit-chat-bot-message {
         margin-left: 0;
@@ -58,11 +58,26 @@
     }
 
     .react-chatbot-kit-chat-message-container {
-      height: 100%;
+      // height: 100%;
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+    }
+
+    .react-chatbot-kit-user-chat-message-container {
+      padding-bottom: 1.3rem;
+    }
+
+    .react-chatbot-kit-chat-inner-container {
+      height: 100vh;
+      position: fixed;
+      z-index: 22;
+      bottom: 0;
+      right: 0;
+      left: 0;
     }
   }
 
-  .bot-div{
+  .bot-div {
     display: none;
   }
 }

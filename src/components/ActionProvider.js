@@ -32,8 +32,28 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     }));
   };
 
-  const handleDateSelected = (val) => {
-    console.log(val);
+  const handleDateSelected = (val, time) => {
+    if (val.message && time.message) {
+      const selectedDate = `${val.message} ${time.message}`;
+      const clientMessage = createClientMessage(selectedDate);
+
+      if (clientMessage) {
+        setState((prev) => ({
+          ...prev,
+          messages: [...prev.messages, clientMessage],
+        }));
+
+        const botMessage = createChatBotMessage("Enter your Name", {
+          withAvatar: true,
+          delay: 600,
+        });
+
+        setState((prev) => ({
+          ...prev,
+          messages: [...prev.messages, botMessage],
+        }));
+      }
+    }
   };
 
   const handleDefault = () => {
