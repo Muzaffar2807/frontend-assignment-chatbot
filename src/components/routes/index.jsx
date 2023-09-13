@@ -12,7 +12,7 @@ export default function CustomRoutes() {
     <AuthLayout>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/page3" element={<Checkout />} />
+        <Route path="/exit" element={<Checkout />} />
         <Route path="/chatbot" element={<ChatPage />} />
       </Routes>
     </AuthLayout>

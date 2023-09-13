@@ -5,9 +5,8 @@ import "./Header.scss";
 import { FiAlignJustify } from "react-icons/fi";
 import { FiX } from "react-icons/fi";
 
-import Logo from "../../assets/images/Og_only_icon-svg.png"
- 
- 
+import Logo from "../../assets/images/Og_only_icon-svg.png";
+
 const Header = () => {
   const [click, setClick] = useState(false);
 
@@ -18,16 +17,14 @@ const Header = () => {
       <div className={click ? "main-container" : ""} onClick={() => Close()} />
       <nav className="navbar" onClick={(e) => e.stopPropagation()}>
         <div className="nav-container">
-          <NavLink exact to="/" className="nav-logo">
+          <NavLink to="/" className="nav-logo">
             <img src={Logo} alt="Logo" className="logo" />
             <span> Ratham </span>
           </NavLink>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
               <NavLink
-                exact
                 to="/"
-                activeClassName="active"
                 className="nav-links"
                 onClick={click ? handleClick : null}
               >
@@ -37,7 +34,6 @@ const Header = () => {
             <li className="nav-item">
               <NavLink
                 to="/chatbot"
-                activeClassName="active"
                 className="nav-links"
                 onClick={click ? handleClick : null}
               >

@@ -1,12 +1,13 @@
-import { createChatBotMessage } from "react-chatbot-kit"; 
-import GotIt from "./widgets/GotItButton";
+import { createChatBotMessage } from "react-chatbot-kit";
+import GotIt from "./widgets/intro/introButton";
 import DateCalender from "./widgets/calender/Calender";
-import Options from "./widgets/GotItButton";
+import UserName from "./widgets/userName/userName";
+import UserAge from "./widgets/userAge/userage";
+import Exit from "./widgets/Exit/Exit";
 
 const config = {
   initialMessages: [
     createChatBotMessage(`Hello, Welcome to student info system!`, {
-      withAvatar: true,
       delay: 600,
       widget: "overview",
     }),
@@ -22,8 +23,16 @@ const config = {
       widgetFunc: (props) => <DateCalender {...props} />,
     },
     {
-      widgetName: "options",
-      widgetFunc: (props) => <Options {...props} />,
+      widgetName: "username",
+      widgetFunc: (props) => <UserName {...props} />,
+    },
+    {
+      widgetName: "age",
+      widgetFunc: (props) => <UserAge {...props} />,
+    },
+    {
+      widgetName: "exit",
+      widgetFunc: (props) => <Exit {...props} />,
     },
   ],
   customStyles: {
