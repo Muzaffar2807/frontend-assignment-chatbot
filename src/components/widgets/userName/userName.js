@@ -9,7 +9,7 @@ const UserName = (props) => {
   const [disabled, setDisabled] = useState(false);
   const dispatch = useDispatch();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event) => { //action
     if (event.keyCode === 13) {
       if (name !== "") {
         props.actions.handleUserName(name);

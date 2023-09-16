@@ -10,9 +10,6 @@ const AuthLayout = (props) => {
           <Header />
         </div>
         <div className="content-layout">{props.children}</div>
-        <div className="footer-layout">
-         
-        </div>
       </div>
     </div>
   );
